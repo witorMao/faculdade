@@ -1,0 +1,8 @@
+public class Dicionario < K, V >{
+	private K chave[];
+	private V valor[];
+	
+	public Dicionario() {
+		this.chave = (K[])new Object[];
+	}
+}

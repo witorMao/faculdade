@@ -1,0 +1,33 @@
+
+public class ContaEspecial extends ContaBancaria {
+
+	
+	private double limite;
+
+	public ContaEspecial(String n, double l) {
+		super(n);
+		limite = l;
+	}
+	
+	public void atualiza(double t) {
+	}
+	
+	@Override
+	public void saca(double qto) {
+		double s = getSaldo();
+		if ( qto > s + limite )
+			throw new IllegalArgumentException("Limite excedido para esse saque");
+		setSaldo( s - qto );
+	}
+	
+	public int compareTo(ContaBancaria c) {
+		if(c instanceof PoupancaSimples || c instanceof PoupancaOuro) return -1;
+		else {
+			if(this.getSaldo() < c.getSaldo()) return -1;
+			else {
+				if(this.getSaldo() > c.getSaldo()) return 1;
+				else return 0;
+			}
+		}
+	}
+}

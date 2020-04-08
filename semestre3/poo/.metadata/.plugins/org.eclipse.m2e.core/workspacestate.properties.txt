@@ -1,0 +1,4 @@
+#Fri Jun 21 18:10:14 BRT 2019
+com.aplicativo\:Aplicativo\:jar\:tests\:0.0.1-SNAPSHOT=/home/witor_mao/Documentos/poo/projeto/AplicativoLEVE/target/test-classes
+com.aplicativo\:Aplicativo\:jar\:\:0.0.1-SNAPSHOT=/home/witor_mao/Documentos/poo/projeto/AplicativoLEVE/target/classes
+com.aplicativo\:Aplicativo\:pom\:\:0.0.1-SNAPSHOT=/home/witor_mao/Documentos/poo/projeto/AplicativoLEVE/pom.xml

@@ -1,0 +1,19 @@
+public class Par <K, V> {
+	private K valor1;
+	private V valor2;
+
+	@SuppressWarnings("unchecked")
+	public Par(K v1, V v2) {
+		this.valor1 = v1;
+		this.valor2 = v2;
+	}
+	
+	public K getValor1() {
+		return this.valor1;
+	}
+	
+	public V getValor2() {
+		return this.valor2;
+	}
+	
+}

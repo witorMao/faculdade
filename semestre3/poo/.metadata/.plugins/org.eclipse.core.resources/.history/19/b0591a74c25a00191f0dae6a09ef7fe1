@@ -1,0 +1,17 @@
+public class Main {
+	Funcionario funcionarios[];
+	
+	String auxNome;
+	String auxCpf;
+	double auxSalario;
+	
+	for(int i = 0; i < 10; ++i) {
+		System.out.println(("Digite o nome: ");
+		auxNome = EntradaTeclado.leString();
+		System.out.println(("Digite o CPF: ");
+		auxCPF = EntradaTeclado.leString();
+		System.out.println(("Digite o salario base: ");
+		auxNome = EntradaTeclado.leString();
+	}
+	
+}

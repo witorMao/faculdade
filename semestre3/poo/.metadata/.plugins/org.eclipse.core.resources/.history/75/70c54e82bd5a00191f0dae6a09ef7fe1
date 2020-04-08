@@ -1,0 +1,25 @@
+public abstract class Funcionario {
+	private String nome;
+	private String CPF;
+	private double salarioBase;
+	
+	public Funcionario(String n, String c, double s) {
+		this.nome = n;
+		this.CPF = c;
+		this.salarioBase = s;
+	}
+	
+	public String getNome() {
+		return this.nome;
+	}
+	
+	public String getCPF() {
+		return this.CPF;
+	}
+	
+	public double getSalarioBase() {
+		return this.salarioBase;
+	}
+	
+	public abstract double calculaSalario();
+}

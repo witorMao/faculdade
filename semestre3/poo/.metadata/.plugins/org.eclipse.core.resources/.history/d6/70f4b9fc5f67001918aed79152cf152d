@@ -1,0 +1,20 @@
+
+public class NoLista <K>{
+	private K objeto;
+	private NoLista prox;
+	
+	public NoLista(K ob) {
+		this.objeto = ob;
+		this.prox = null;
+	}
+	
+	public K getNoLista() {
+		return this.objeto;
+	}
+	
+	public K setNoLista(K o) {
+		this.objeto = o;
+	}
+}
+
+

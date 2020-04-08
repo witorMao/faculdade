@@ -1,0 +1,5 @@
+public class Bozo {
+	public static void main(String[] args) {
+		RolaDados dados = new RolaDados();
+	}
+}

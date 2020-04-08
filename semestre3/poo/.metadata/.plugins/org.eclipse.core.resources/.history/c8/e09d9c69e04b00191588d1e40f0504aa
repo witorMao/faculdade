@@ -1,0 +1,29 @@
+
+public class Baralho {
+	private Carta cartas[] = new Carta[52];
+	private Num_aleatorios random = new Num_aleatorios();
+	private Carta ultima = new Carta();
+	public Baralho() {
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta(p, 2+i);//paus
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta(o, 2+i);//ouros
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta(c, 2+i);//copas
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta(e, 2+i);//espadas
+		}
+	}
+	
+	public Carta[] retornaCartas() {
+		Carta vetor[] = new Carta[5];
+		int aux = random.getIntRand(0, 4);
+		char naipe = random.getIntRand()
+		for(int i = 0; i < 5; ++i) {
+			vetor[i].
+		}
+	}
+}

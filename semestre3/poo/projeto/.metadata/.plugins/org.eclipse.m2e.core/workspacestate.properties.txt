@@ -1,0 +1,4 @@
+#Wed Jun 05 14:10:01 BRT 2019
+com.aplicativo\:Aplicativo\:jar\:tests\:0.0.1-SNAPSHOT=/home/witor_mao/Documentos/poo/projeto/Aplicativo/target/test-classes
+com.aplicativo\:Aplicativo\:jar\:\:0.0.1-SNAPSHOT=/home/witor_mao/Documentos/poo/projeto/Aplicativo/target/classes
+com.aplicativo\:Aplicativo\:pom\:\:0.0.1-SNAPSHOT=/home/witor_mao/Documentos/poo/projeto/Aplicativo/pom.xml

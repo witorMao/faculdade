@@ -1,0 +1,13 @@
+
+public abstract class ContaPoupanca extends ContaBancaria {
+	private int vencimento;
+	
+	public abstract ContaPoupanca(String n, int dia);
+
+	public abstract int getVencimento();
+
+	public abstract void setVencimento(int vencimento);
+
+	public abstract void atualiza(double taxa);
+	
+}

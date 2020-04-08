@@ -1,0 +1,11 @@
+public class Dicionario < K, V >{
+	private K chave[];
+	private V valor[];
+	
+
+	@SuppressWarnings("unchecked")
+	public Dicionario() {
+		this.chave = (K[])new Object[100];
+		this.valor = (V[])new Object[100];
+	}
+}

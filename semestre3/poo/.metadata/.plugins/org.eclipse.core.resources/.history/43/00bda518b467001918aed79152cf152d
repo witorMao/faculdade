@@ -1,0 +1,94 @@
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class ListaLigadaTest {
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	Par <Integer, Double> p = (Par) new Par <Integer, Double>(-1, (double)-1);;
+	@SuppressWarnings("rawtypes")
+	ListaLigada <Par> l = new ListaLigada <Par>();;
+
+	@Test
+	void testAddInicioLista() {
+		p.setValor1(0);
+		p.setValor2((double)5);
+		l.addInicioLista(p);
+		assertEquals(p, l.getObjetoInicio());
+		
+		p.setValor1(1);
+		p.setValor2((double)4);
+		l.addInicioLista(p);
+		assertEquals(p, l.getObjetoInicio());
+
+		p.setValor1(2);
+		p.setValor2((double)3);
+		l.addInicioLista(p);
+		assertEquals(p, l.getObjetoInicio());
+	}
+
+	@Test
+	void testAddFimLista() {
+
+		p.setValor1(3);	
+		p.setValor2((double)2);
+		l.addFimLista(p);
+		assertEquals(p, l.getObjetoFim());
+		
+		p.setValor1(4);
+		p.setValor2((double)1);
+		l.addFimLista(p);
+		assertEquals(p, l.getObjetoInicio());
+
+		p.setValor1(5);
+		p.setValor2((double)0);
+		l.addFimLista(p);
+		assertEquals(p, l.getObjetoInicio());
+	}
+	
+	@SuppressWarnings("rawtypes")
+	@Test
+	void testRemoveInicioLista() {
+		Par p1 = (Par) new Par <Integer, Double>(0, (double)5);
+		l.addInicioLista(p1);
+		
+		Par p2 = (Par) new Par <Integer, Double>(0, (double)5);
+		l.addInicioLista(p2);
+
+		p.setValor1(2);
+		p.setValor2((double)3);
+		l.addInicioLista(p);
+		
+		assertEquals(p, l.removeInicioLista());
+		
+		assertEquals(p2, l.removeInicioLista());
+
+		assertEquals(p1, l.removeInicioLista());
+		
+		assertThrows(NullPointerException.class, l.removeFimLista());
+	}
+
+	@SuppressWarnings("rawtypes")
+	@Test
+	void testRemoveFimLista() {
+		
+		Par p1 = (Par) new Par <Integer, Double>(0, (double)5);
+		l.addInicioLista(p1);
+		
+		Par p2 = (Par) new Par <Integer, Double>(0, (double)5);
+		l.addInicioLista(p2);
+
+		p.setValor1(2);
+		p.setValor2((double)3);
+		l.addInicioLista(p);
+		
+		assertEquals(p1, l.removeFimLista());
+		
+		assertEquals(p2, l.removeFimLista());
+
+		assertEquals(p, l.removeFimLista());
+		
+		assertThrows(NullPointerException.class, () -> {
+			l.removeFimLista();
+		});
+	}
+
+}

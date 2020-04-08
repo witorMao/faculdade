@@ -1,0 +1,115 @@
+public class ListaLigada <K>{
+	private NoLista <K> inicio;
+	private NoLista <K> fim;
+	private int tam;
+	
+	public ListaLigada() {
+		this.inicio = null;
+		this.fim = null;
+		this.tam = 0;
+	}
+	
+	public int getTamLista() {
+		return this.tam;
+	}
+	
+	public void setTamLista(int t) {
+		this.tam = t;
+	}
+
+	public void addInicioLista(K o) {
+		if(this.tam == 0) {
+			this.inicio = new NoLista <K>(o);
+			this.fim = this.inicio;
+			this.tam++;
+		}else{
+			NoLista <K> aux = this.inicio;
+			this.inicio = new NoLista <K>(o);
+			this.inicio.setNoListaProx(aux);
+			this.tam++;
+		}
+	}
+	
+	public void addFimLista(K o) {
+		if(this.tam == 0) {
+			this.inicio = new NoLista <K>(o);
+			this.fim = this.inicio;
+			this.tam++;
+		}else{
+			NoLista <K> aux = new NoLista <K>(o);
+			this.fim.setNoListaProx(aux);
+			this.fim = aux;
+			this.tam++;
+		}
+	}
+	
+	public void removeInicioLista() {
+		if(this.tam == 0) {
+			System.out.println("Lista vazia. Não pode remover!!");
+		}else{
+			this.inicio = this.inicio.getNoListaProx();
+			this.tam--;
+		}
+	}
+	
+	public void removeFimLista() {
+		if(this.tam == 0) {
+			System.out.println("Lista vazia. Não pode remover!!");
+		}else{
+			NoLista <K> aux = this.inicio;
+			while(aux.getNoListaProx() != this.fim) {
+				aux = aux.getNoListaProx();
+			}
+			this.fim = aux;
+			this.fim.setNoListaProx(null);
+			this.tam--;
+		}
+	}
+	
+	public void printLista() {
+		NoLista <K> aux = this.inicio;
+		while(aux.getNoListaProx() != null) {
+			aux.printNoLista();
+			System.out.print(" ");
+			aux = aux.getNoListaProx();
+		}
+		aux.printNoLista();
+	}
+	
+	public static void main(String[] args) {
+		ListaLigada <Integer> l = new ListaLigada<Integer>();
+		for(int i = 1; i < 5; ++i) {
+			l.addFimLista(i);
+			l.fim.printNoLista();
+			System.out.print(" ");
+		}
+		System.out.print("\n");
+//		
+//		System.out.print("Antes de remover inicio: ");
+//		l.inicio.printNoLista();
+//		System.out.print(" ");
+//		l.fim.printNoLista();
+//		
+//		System.out.print("\n");
+		
+		System.out.print("Depois de remover inicio: ");
+		l.removeInicioLista();
+		l.printLista();
+		
+		System.out.print("\n");
+		System.out.print("Depois de remover fim: ");
+		l.removeFimLista();
+		l.printLista();
+		
+		System.out.print("\n");
+		System.out.print("Depois de inserir no inicio: ");
+		l.addInicioLista(10);
+		l.printLista();
+		
+		System.out.print("\n");
+		System.out.print("Depois de inserir no fim: ");
+		l.addFimLista(15);
+		l.printLista();
+		
+	}
+}

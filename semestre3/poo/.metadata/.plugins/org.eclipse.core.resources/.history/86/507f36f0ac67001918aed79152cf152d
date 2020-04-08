@@ -1,0 +1,49 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ListaLigadaTest {
+	Par <Integer, Double> p = new Par<Integer, Double>(-1, (double)-1);
+	@SuppressWarnings("rawtypes")
+	ListaLigada <Par> l = new;
+	@Test
+	void testListaLigada() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetTamLista() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetObjetoInicio() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetObjetoFim() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testAddInicioLista() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testAddFimLista() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testRemoveInicioLista() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testRemoveFimLista() {
+		fail("Not yet implemented");
+	}
+
+}

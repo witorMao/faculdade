@@ -1,0 +1,9 @@
+public class Carta {
+	private char naipe;
+	private char valor;
+	
+	public Carta(char v, char n) {
+		this.naipe = naipe;
+		this.valor = v;
+	}
+}

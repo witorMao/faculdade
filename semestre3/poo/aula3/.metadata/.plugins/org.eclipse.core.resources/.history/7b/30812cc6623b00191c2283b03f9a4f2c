@@ -1,0 +1,20 @@
+import java.io.IOException;
+
+public class exercicio4 {
+	public static void main(String[] args) throws IOException {
+		int x = EntradaTeclado.leInt();
+		double resto;
+		for(int i = 1; i <= x; ++i ){
+			resto = x%i;
+			if(resto == 0 && (i == 1 || i == x)) {
+				System.out.printf("É primo"\n);
+				break;
+			}else 
+				for(int j = 1; j <= x; ++j){
+					if(resto == 0){
+						System.out.printf("Seu menor divisor é: %d", j);
+				}
+			}
+		}
+	}
+}

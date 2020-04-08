@@ -1,0 +1,81 @@
+Tabela 1: Tempo de insercao crescente
+	n=100	n=1.000	n=10.000	n=100.000
+BB	2.5	10.5	5	12.87
+LO	2.5	10.5	5	12.87
+LOS	2.5	10.5	5	12.87
+ABB	2.5	10.5	5	12.87
+AVL	2.5	10.5	5	12.87
+LFREQ	2.5	10.5	5	12.87
+-
+Tabela 2: Tempo de insercao decrescente
+	n=100	n=1.000	n=10.000	n=100.000
+BB	2.5	10.5	5	12.87
+LO	2.5	10.5	5	12.87
+LOS	2.5	10.5	5	12.87
+ABB	2.5	10.5	5	12.87
+AVL	2.5	10.5	5	12.87
+LFREQ	2.5	10.5	5	12.87
+-
+Tabela 3: Tempo de insercao aleatoria
+	n=100	n=1.000	n=10.000	n=100.000
+BB	2.5	10.5	5	12.87
+LO	2.5	10.5	5	12.87
+LOS	2.5	10.5	5	12.87
+ABB	2.5	10.5	5	12.87
+AVL	2.5	10.5	5	12.87
+LFREQ	2.5	10.5	5	12.87
+-
+Tabela 4: Tempo de remocao crescente (apos insercao crescente)
+	n=100	n=1.000	n=10.000	n=100.000
+BB	2.5	10.5	5	12.87
+LO	2.5	10.5	5	12.87
+LOS	2.5	10.5	5	12.87
+ABB	2.5	10.5	5	12.87
+AVL	2.5	10.5	5	12.87
+LFREQ	2.5	10.5	5	12.87
+-
+Tabela 5: Tempo de remocao decrescente (apos insercao crescente)
+	n=100	n=1.000	n=10.000	n=100.000
+BB	2.5	10.5	5	12.87
+LO	2.5	10.5	5	12.87
+LOS	2.5	10.5	5	12.87
+ABB	2.5	10.5	5	12.87
+AVL	2.5	10.5	5	12.87
+LFREQ	2.5	10.5	5	12.87
+-
+Tabela 6: Tempo de remocao aleatoria (apos insercao aleatoria)
+	n=100	n=1.000	n=10.000	n=100.000
+BB	2.5	10.5	5	12.87
+LO	2.5	10.5	5	12.87
+LOS	2.5	10.5	5	12.87
+ABB	2.5	10.5	5	12.87
+AVL	2.5	10.5	5	12.87
+LFREQ	2.5	10.5	5	12.87
+-
+Tabela 7: Tempo de busca (apos insercao crescente)
+	n=100	n=1.000	n=10.000	n=100.000
+BB	2.5	10.5	5	12.87
+LO	2.5	10.5	5	12.87
+LOS	2.5	10.5	5	12.87
+ABB	2.5	10.5	5	12.87
+AVL	2.5	10.5	5	12.87
+LFREQ	2.5	10.5	5	12.87
+-
+Tabela 8: Tempo de busca (apos insercao decrescente)
+	n=100	n=1.000	n=10.000	n=100.000
+BB	2.5	10.5	5	12.87
+LO	2.5	10.5	5	12.87
+LOS	2.5	10.5	5	12.87
+ABB	2.5	10.5	5	12.87
+AVL	2.5	10.5	5	12.87
+LFREQ	2.5	10.5	5	12.87
+-
+Tabela 9: Tempo de busca (apos insercao aleatoria)
+	n=100	n=1.000	n=10.000	n=100.000
+BB	2.5	10.5	5	12.87
+LO	2.5	10.5	5	12.87
+LOS	2.5	10.5	5	12.87
+ABB	2.5	10.5	5	12.87
+AVL	2.5	10.5	5	12.87
+LFREQ	2.5	10.5	5	12.87
+-

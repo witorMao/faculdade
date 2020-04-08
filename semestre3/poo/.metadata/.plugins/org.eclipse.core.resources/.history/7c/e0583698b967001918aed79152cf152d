@@ -1,0 +1,40 @@
+**
+ * Classe genérica que representa a estrutura de dados lista ligada, desenvolvida com a aplicação de Generics em Java, da aula de POO. 
+ * @author Witor Matheus Alves de Oliveira
+ *
+ * @param <K> Tipo a ser definido pelo usuário na hora dda instanciação da lista.
+ */
+public class NoLista <K>{
+	private K objeto;
+	private NoLista <K> prox;
+	
+	
+	@SuppressWarnings("unchecked")
+	public NoLista(K ob) {
+		this.objeto = (K) new Object();
+		this.objeto = ob;
+		this.prox = null;
+	}
+	
+	public K getObjeto() {
+		return this.objeto;
+	}
+	
+	public void setObjeto(K o) {
+		this.objeto = o;
+	}
+	
+	public NoLista <K>getNoListaProx() {
+		return this.prox;
+	}
+	
+	public void setNoListaProx(NoLista <K> p) {
+		this.prox = p;
+	}
+	
+//	public void printNoLista() {
+//		System.out.print(this.objeto);
+//	}
+}
+
+

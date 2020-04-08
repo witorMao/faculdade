@@ -1,0 +1,89 @@
+package baralho;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class JogadorTest {
+
+	@Test
+	void testJogador() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetCreditos() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSetCreditos() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSetCarta() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSetCartas() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testVerificaPontuacao() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testContaAparicoes() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testRStraightFlush() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testStraightFlush() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testQuadra() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testFullHand() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testFlush() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testStraight() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testTrinca() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testDoisPares() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testToString() {
+		fail("Not yet implemented");
+	}
+
+}

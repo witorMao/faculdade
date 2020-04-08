@@ -1,0 +1,33 @@
+import java.util.Calendar;
+
+public class Num_aleatorios {
+	public long xi = 1023;//seed
+	//parametros pra gerar unm aleatorios
+	private long a = 453816693;
+	private long m = 843314861;
+	private long p = 2147483648L;
+	
+	public double getRand() {
+		xi = (a + m*xi)%p;
+		return ((double)xi/p);
+	}
+	
+	public int getIntRand(int max) {
+		return ((int)(getRand() * max));
+	}
+	
+	public void setSemente(int i) {
+		xi = i;
+	}
+	//metodo construtor
+	public Num_aleatorios(int i) {
+		xi = i;
+	}
+	
+//	public Num_aleatorios() {
+//	}
+	
+	public Num_aleatorios() {
+		xi = Calendar.getInstance().getTimeInMillis() % p;
+	}
+}

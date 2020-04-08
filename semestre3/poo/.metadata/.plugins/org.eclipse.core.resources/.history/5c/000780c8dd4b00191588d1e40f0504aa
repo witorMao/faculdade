@@ -1,0 +1,11 @@
+
+public class Baralho {
+	private int cartas[] = new int[52];
+	private Num_aleatorios random = new Num_aleatorios();
+	
+	public void embaralharCartas() {
+		for(int i = 0; i < 52; ++i) {
+			cartas[i] = random.getIntRand(2, 14);//ao todo o baralho tem 13 cartas por isso 14
+		}
+	}
+}

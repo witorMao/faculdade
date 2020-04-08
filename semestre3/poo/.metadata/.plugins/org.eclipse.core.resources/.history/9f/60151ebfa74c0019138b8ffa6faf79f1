@@ -1,0 +1,13 @@
+public class Jogador {
+	private int creditos;
+	private Carta cartas[];
+	
+	public Jogador() {
+		this.creditos = 200;
+		for(int i = 0; i < 5; ++i) {
+			
+		}
+	}
+	
+	
+}

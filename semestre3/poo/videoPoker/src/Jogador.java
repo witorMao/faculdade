@@ -1,0 +1,20 @@
+public class Jogador {
+	private int creditos;
+	private Carta cartas[] = new Carta[5];
+	
+	public Jogador(Carta[] c) {
+		this.creditos = 200;
+	}
+	
+	public int getCreditos() {
+		return this.creditos;
+	}
+	
+	public void setCreditos(int n) {
+		this.creditos = n;
+	}
+	
+	public void atualizaCartas(Carta[] c) {
+		for(int i = 0; i < 5; ++i) this.cartas[i].copiaCarta(c[i]); 
+	}
+}

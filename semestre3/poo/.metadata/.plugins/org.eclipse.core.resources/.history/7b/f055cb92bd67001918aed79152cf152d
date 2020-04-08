@@ -1,0 +1,60 @@
+/**
+ * Classe genérica que representa objeto nó utilizado na criação da classe que representa a estrutura de dados lista ligada, desenvolvida com a aplicação de Generics em Java, da aula de POO. 
+ * @author Witor Matheus Alves de Oliveira
+ *
+ * @param <K> Tipo a ser definido pelo usuário na hora dda instanciação da lista.
+ */
+public class NoLista <K>{
+	private K objeto;
+	private NoLista <K> prox;
+	
+	
+	@SuppressWarnings("unchecked")
+	/**
+	 * Método construtor do objeto NoLista.
+	 * @param ob - Objeto do tipo <K> definido pelo usuario na hora da instanciação do objeto ListaLigada.
+	 */
+	public NoLista(K ob) {
+		this.objeto = (K) new Object();
+		this.objeto = ob;
+		this.prox = null;
+	}
+	
+	/**
+	 * Método que retorna o objeto do nó.
+	 * @return - Objeto do tipo <K> definido pelo usuario na hora da instanciação do objeto ListaLigada.
+	 */
+	public K getObjeto() {
+		return this.objeto;
+	}
+	
+	/**
+	 * Método que modifica o objeto do nó.
+	 * @param o - Objeto do tipo <K> definido pelo usuario na hora da instanciação do objeto ListaLigada.
+	 */
+	public void setObjeto(K o) {
+		this.objeto = o;
+	}
+	
+	/**
+	 * Método que retorna o nó  para o qual o nó atual aponta.
+	 * @return - Nó para o qual o nó atual aponta.
+	 */
+	public NoLista <K>getNoListaProx() {
+		return this.prox;
+	}
+	
+	/**
+	 * Método que modifica o nó para o qual o nó atual deve apontar.
+	 * @param p - Nó para o qual o nó atual deve apontar.
+	 */
+	public void setNoListaProx(NoLista <K> p) {
+		this.prox = p;
+	}
+	
+//	public void printNoLista() {
+//		System.out.print(this.objeto);
+//	}
+}
+
+

@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Baralho","l":"Baralho()"},{"p":"<Unnamed>","c":"Baralho","l":"daCartas()"},{"p":"<Unnamed>","c":"Baralho","l":"pegaCarta()"},{"p":"<Unnamed>","c":"Baralho","l":"reembaralha()"}]

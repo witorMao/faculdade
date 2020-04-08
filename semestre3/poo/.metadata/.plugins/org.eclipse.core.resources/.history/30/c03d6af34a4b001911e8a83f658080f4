@@ -1,0 +1,14 @@
+public class Bozo {
+	public static void main(String[] args) {
+		RolaDados dados = new RolaDados(5);
+		Placar pontos = new Placar();
+		String rejogar;
+		for(int i = 0; i < 10; ++i) {
+			System.out.println("Digite a tecla ENTER para iniciar a rodada!");
+			dados.rolar();
+			System.out.println(dados.toString());
+			System.out.println("Digite os dados que deseja jogar novamente(separe os números apenas por um espaço): ");
+			rejogar = EntradaTeclado.leString();
+		}
+	}
+}

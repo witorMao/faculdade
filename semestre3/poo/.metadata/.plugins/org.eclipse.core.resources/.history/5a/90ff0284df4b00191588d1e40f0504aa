@@ -1,0 +1,30 @@
+
+public class Baralho {
+	private Carta cartas[] = new Carta[52];
+	private Num_aleatorios random = new Num_aleatorios();
+	private Carta ultima = new Carta();
+	public Baralho() {
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta(p, 2+i);//paus
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta(o, 2+i);//ouros
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta(c, 2+i);//copas
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta(e, 2+i);//espadas
+		}
+	}
+	
+	public void embaralharCartas() {
+		for(int i = 0; i < 52; ++i) {
+			cartas[i] = random.getIntRand(2, 14);//ao todo o baralho tem 13 cartas por isso 14
+		}
+	}
+	
+	public char[] retornaCartas() {
+		
+	}
+}

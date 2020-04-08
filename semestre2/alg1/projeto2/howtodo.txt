@@ -1,0 +1,20 @@
+COMPILADOR:
+gcc (GCC) 8.2.1 20181105 (Red Hat 8.2.1-5)
+
+SISTEMA:
+LSB Version:	:core-4.1-amd64:core-4.1-noarch
+Distributor ID:	Fedora
+Description:	Fedora release 29 (Twenty Nine)
+Release:	29
+Codename:	TwentyNine
+
+BIBLIOTECAS:
+stdio.h
+stdlib.h
+time.h
+stdbool.h
+
+COMO COMPILAR:
+1) Entre na pasta contendo os arquivos fonte, por meio de um emulador de terminal.
+2) Execute "make all" para a compilação
+3) Execute "make run" para executar o programa

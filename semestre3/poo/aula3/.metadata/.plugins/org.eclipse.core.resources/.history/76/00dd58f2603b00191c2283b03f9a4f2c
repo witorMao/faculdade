@@ -1,0 +1,19 @@
+import java.io.IOException;
+
+public class exercicio1 {
+	public static void main(String[] args) throws IOException {
+		double chute = EntradaTeclado.leDouble();
+		double x = EntradaTeclado.leDouble();
+		
+		double aux = (chute + (x/chute))/2;
+		double erro_calc = Math.abs(aux - chute);
+		
+		while(erro_calc > 0.00000001){
+			aux = (chute - (x/chute))/2;
+			erro_calc = aux - chute;
+		}
+		
+		System.out.printf("x final = %f, erro final = %f\n", aux, erro_calc);
+			
+	}
+}

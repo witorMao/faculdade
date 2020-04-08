@@ -1,0 +1,51 @@
+public class Dado {
+	private int lados;
+	private int ultimoLado;
+	private Num_aleatorios num = new Num_aleatorios(); 
+	
+	public Dado(int l) {
+		this.lados = l;
+	}
+	
+	public Dado() {
+		this.lados = 6;
+	}
+	
+	public int rolar () {
+		this.ultimoLado = this.num.getIntRand(1, this.lados+1);
+		return this.ultimoLado;
+	}
+	
+	public int getLado() {
+		return this.ultimoLado;
+	}
+	
+	@Override
+	
+	public String toString() {
+		if(getLado() == 1)
+	        return "\n+-----+\n|     |\n|  *  |\n|     |\n+-----+ \n";                       
+		else {
+			if(getLado() == 2)
+	            return "\n+-----+\n|    *|\n|     |\n|*    |\n+-----+\n";
+			else {
+	            if(getLado() == 3)
+	                return "\n+-----+\n|    *|\n|  *  |\n|*    |\n+-----+\n";
+	            else {
+	            	if(getLado() == 4)
+	            		return "\n+-----+\n|*   *|\n|     |\n|*   *|\n+-----+\n";
+	            	else {
+	            		if(getLado() == 5)
+	            			return "\n+-----+\n|*   *|\n|  *  |\n|*   *|\n+-----+ \n";
+	            		else {
+	            			if(getLado() == 6)
+	            				return "\n+-----+\n|*   *|\n|*   *|\n|*   *|\n+-----+\n";
+	           
+	            		}
+	            	}
+	            }
+			}
+		}            
+	}
+	
+}

@@ -1,0 +1,41 @@
+
+public class Baralho {
+	private Carta cartas[] = new Carta[52];
+	private Num_aleatorios random = new Num_aleatorios();
+	private Carta ultima = new Carta();
+	
+	public Baralho() {
+		int aux;
+		for(int i = 0; i < 13; ++i) {
+			aux = 2+i;
+			if(aux == 10) cartas[i] = new Carta('p', '!');//paus
+			else cartas[i].Carta('p', (char)aux);//paus
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta('o', 2+i);//ouros
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta('c', 2+i);//copas
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta('e', 2+i);//espadas
+		}
+	}
+	
+	public Carta[] retornaCartas() {
+		Carta vetor[] = new Carta[5];
+		
+		int aux;
+		for(int i = 0; i < 5; ++i) {
+			aux = random.getIntRand(0, 53);
+			
+			//enquanto a nova carta selecionada for igual a última gerada, escolhe uma nova carta
+			while(i != 0 && this.cartas[aux].comparaCartas(this.ultima)) {
+				aux = random.getIntRand(0, 53);
+			}
+			//depois copia a nova carta para o vetor e atualiza a ultima carta
+			vetor[i].Carta(this.cartas[aux].getNaipe(), this.cartas[aux].getValor());
+			this.ultima.copiaCarta(this.cartas[aux]);
+		}
+	}
+}

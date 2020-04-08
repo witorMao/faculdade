@@ -1,0 +1,28 @@
+public class Bozo {
+	public static void main(String[] args) throws Exception{
+		RolaDados dados = new RolaDados(5);
+		Placar pontos = new Placar();
+		int jogado[];
+		for(int i = 0; i < 10; ++i) {
+			System.out.println("Digite a tecla ENTER para iniciar a rodada!");
+			//pausa até vir enter
+			jogado = dados.rolar();
+			System.out.println(dados.toString());
+			
+			System.out.println("Digite os dados que deseja jogar novamente(separe os números apenas por um espaço): ");
+			jogado = dados.rolar(EntradaTeclado.leString());
+			System.out.println(dados.toString());
+			
+			System.out.println("Digite os dados que deseja jogar novamente(separe os números apenas por um espaço): ");
+			jogado = dados.rolar(EntradaTeclado.leString());
+			System.out.println(dados.toString());
+			
+			pontos.toString();
+			System.out.println("Digite a posição que deseja ocupar: ");
+			pontos.add(EntradaTeclado.leInt(), jogado);
+			
+		}
+		System.out.println("Seus pontos foram: " + pontos.getScore());
+		
+	}
+}

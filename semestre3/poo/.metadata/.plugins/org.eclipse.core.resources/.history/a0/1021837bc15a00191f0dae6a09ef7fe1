@@ -1,0 +1,12 @@
+public class Vendedor extends Funcionario {
+	double comissao;
+	public Vendedor(String n, String c, double s, double co) {
+		super(n, c, s);
+		this.comissao = co;
+	}
+	
+	public double calculaSalario() {
+		return (this.getSalarioBase() + this.comissao);
+	}
+	
+}

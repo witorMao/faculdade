@@ -1,0 +1,28 @@
+public class Dicionario < K, V >{
+	private K chave[];
+	private V valor[];
+	private int tam;
+	
+
+	@SuppressWarnings("unchecked")
+	public Dicionario() {
+		this.chave = (K[])new Object[100];
+		this.valor = (V[])new Object[100];
+		this.tam = 0;
+	}
+	
+	public void add(K c, V v) {
+		if(tam < 100) {
+			this.chave[tam] = c;
+			this.valor[tam] = v;
+			this.tam++;
+		}else System.out.println("Diconário cheio!!!");
+	}
+	
+	K void get(K c) {
+		for(int i = 0; i <= tam; ++i) {
+			if(this.chave[i] == c) return this.chave[i];
+		}
+	}
+	
+}

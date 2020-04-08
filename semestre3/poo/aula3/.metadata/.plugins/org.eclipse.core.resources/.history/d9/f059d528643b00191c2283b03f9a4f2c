@@ -1,0 +1,21 @@
+import java.io.IOException;
+
+public class exercicio5 {
+	public static void main(String[] args) throws IOException {
+		int x = EntradaTeclado.leInt();
+		double resto;
+		for(int j = x - 1; j >= x; --j){
+			int i;
+			for(i = 1; i <= x; ++i){
+				resto = j%i;
+				if(resto == 0 && (i !=1 && i != j)){
+					//System.out.printf("Seu menor divisor é: %d", j);
+					break;
+				}
+			}
+			if(i == x){
+				System.out.printf("%d é o primo mais próximo de %d", j, x);
+			}	
+		}
+	}
+}

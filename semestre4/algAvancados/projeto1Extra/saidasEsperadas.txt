@@ -1,0 +1,4 @@
+teste1.txt - 20.0
+teste2.txt - 15.0
+teste3.txt - 20.0
+teste4.txt - 250.0

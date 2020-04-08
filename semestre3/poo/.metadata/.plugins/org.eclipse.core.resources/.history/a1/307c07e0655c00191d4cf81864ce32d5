@@ -1,0 +1,22 @@
+package baralho;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class JogadorTest {
+
+	@Test
+	void testVerificaPontuacao() {
+		Jogador j = new Jogador();
+		Carta cartas[] = new Carta[]; 
+		for(int i = 0; i < 5; ++i) this.cartas[i] = new Carta('n', 'v');
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testToString() {
+		fail("Not yet implemented");
+	}
+
+}

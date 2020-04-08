@@ -1,0 +1,113 @@
+/**
+ * Classe que representa a estrutura de dados lista ligada, desenvolvida com a aplicação de Generics em Java, como exercício da aula de POO. 
+ * @author Witor Matheus Alves de Oliveira
+ *
+ * @param <K> Tipo a ser definido pelo usuário na hora da instanciação da lista.
+ */
+public class ListaLigada <K>{
+	private NoLista <K> inicio;
+	private NoLista <K> fim;
+	private int tam;
+	
+	/**
+	 * Método construtor da classe ListaLigada.
+	 */
+	public ListaLigada() {
+		this.inicio = null;
+		this.fim = null;
+		this.tam = 0;
+	}
+	
+	/**
+	 * Retorna o objeto no início da lista.
+	 * @return - Objeto do tipo <K> definido pelo usuario na hora da instanciação do objeto ListaLigada.
+	 */
+	public K getObjetoInicio() {
+		return this.inicio.getObjeto();
+	}
+	
+	/**
+	 * Retorna o objeto no fim da lista.
+	 * @return - Objeto do tipo <K> definido pelo usuario na hora da instanciação do objeto ListaLigada.
+	 */
+	public K getObjetoFim() {
+		return this.fim.getObjeto();
+	}
+
+	/**
+	 * Adiciona objeto no início da lista.
+	 * @param o - Objeto do tipo <K> definido na hora da instanciação do objeto ListaLigada.
+	 */
+	public void addInicioLista(K o) {
+		if(this.tam == 0) {
+			this.inicio = new NoLista <K>(o);
+			this.fim = this.inicio;
+			this.tam++;
+		}else{
+			NoLista <K> aux = this.inicio;
+			this.inicio = new NoLista <K>(o);
+			this.inicio.setNoListaProx(aux);
+			this.tam++;
+		}
+	}
+	
+	/**
+	 * Adiciona objeto no fim da lista.
+	 * @param o - Objeto do tipo <K> definido na hora da instanciação do objeto ListaLigada.
+	 */
+	public void addFimLista(K o) {
+		if(this.tam == 0) {
+			this.inicio = new NoLista <K>(o);
+			this.fim = this.inicio;
+			this.tam++;
+		}else{
+			NoLista <K> aux = new NoLista <K>(o);
+			this.fim.setNoListaProx(aux);
+			this.fim = aux;
+			this.tam++;
+		}
+	}
+	
+	/**
+	 * Remove o objeto no início da lista.
+	 * @return - Objeto do tipo <K> definido na hora da instanciação do objeto ListaLigada.
+	 */
+	public K removeInicioLista() {
+		if(this.tam == 0) {
+			throw new NullPointerException();
+		}else{
+			NoLista <K> aux = this.inicio;
+			this.inicio = this.inicio.getNoListaProx();
+			this.tam--;
+			return aux.getObjeto();
+		}
+	}
+	
+	/**
+	 * Remove o objeto no fim da lista.
+	 * @return - Objeto do tipo <K> definido na hora da instanciação do objeto ListaLigada.
+	 */
+	public K removeFimLista() {
+		if(this.tam == 0) {
+			throw new NullPointerException();
+		}else{
+			if(this.tam == 1) {
+				NoLista <K> aux = this.inicio;
+				this.inicio = null;
+				this.fim = null;
+				this.tam--;
+				return aux.getObjeto();
+			}else {
+				NoLista <K> aux = this.inicio;
+				NoLista <K> aux1 = this.fim;
+				while(aux.getNoListaProx() != this.fim) {
+					aux = aux.getNoListaProx();
+				}
+				this.fim = aux;
+				this.fim.setNoListaProx(null);
+				this.tam--;
+				return aux1.getObjeto();
+			}
+		}
+	}
+}

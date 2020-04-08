@@ -1,0 +1,25 @@
+import java.io.IOException;
+
+public class exercico6 {
+	public static void main(String[] args) throws IOException {
+		double x = EntradaTeclado.leDouble();
+		double menor = x;
+		double maior = x;
+		double aux;
+		while(x != 0.0d){
+			x = EntradaTeclado.leDouble();
+			if(x < menor && x != 0){ 
+				menor = x;
+			}else if(x > maior){
+				maior = x;
+			}
+			
+			if(menor > maior){
+				aux = maior;
+				maior = menor;
+				menor = aux;
+			}
+		}
+		System.out.printf("o maior número é %f e o menor é %f", maior, menor);
+	}
+}

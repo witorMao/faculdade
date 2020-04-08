@@ -1,0 +1,130 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ListaLigadaTest {
+	Par <Integer, Double> p = new Par<Integer, Double>(-1, (double)-1);
+	@SuppressWarnings("rawtypes")
+	ListaLigada <Par> l;
+
+	@SuppressWarnings("rawtypes")
+	@Test
+	void testListaLigada() {
+		l = new ListaLigada <Par>();
+		assertNotNull(l);
+	}
+	
+//	@Test
+//	void testGetTamLista() {
+//		fail("Not yet implemented");
+//	}
+
+//	@Test
+//	void testGetObjetoInicio() {
+//		fail("Not yet implemented");
+//	}
+
+//	@Test
+//	void testGetObjetoFim() {
+//		fail("Not yet implemented");
+//	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Test
+	void testAddInicioLista() {
+		p = (Par) new Par <Integer, Double>(0, (double)5);
+		l.addInicioLista(p);
+		assertEquals(p, l.getObjetoInicio());
+		
+		p.setValor1(1);
+		p.setValor2((double)4);
+		l.addInicioLista(p);
+		assertEquals(2, l.getTamLista());
+
+		p.setValor1(2);
+		p.setValor2((double)3);
+		l.addInicioLista(p);
+		assertEquals(3, l.getTamLista());
+	}
+
+	@Test
+	void testAddFimLista() {
+
+		p.setValor1(3);	
+		p.setValor2((double)2);
+		l.addFimLista(p);
+		assertEquals(1, l.getTamLista());
+		
+		p.setValor1(4);
+		p.setValor2((double)1);
+		l.addFimLista(p);
+		assertEquals(2, l.getTamLista());
+
+		p.setValor1(5);
+		p.setValor2((double)0);
+		l.addFimLista(p);
+		assertEquals(3, l.getTamLista());
+	}
+
+	@Test
+	void testRemoveInicioLista() {
+		
+		p.setValor1(0);
+		p.setValor2((double)5);
+		l.addInicioLista(p);
+		assertEquals(1, l.getTamLista());
+		
+		p.setValor1(1);
+		p.setValor2((double)4);
+		l.addInicioLista(p);
+		assertEquals(2, l.getTamLista());
+
+		p.setValor1(2);
+		p.setValor2((double)3);
+		l.addInicioLista(p);
+		assertEquals(3, l.getTamLista());
+		
+		l.removeInicioLista();
+		assertEquals(2, l.getTamLista());
+		
+		l.removeInicioLista();
+		assertEquals(1, l.getTamLista());
+
+		l.removeInicioLista();
+		assertEquals(0, l.getTamLista());
+		
+		l.removeInicioLista();
+		assertEquals(0, l.getTamLista());
+	}
+
+	@Test
+	void testRemoveFimLista() {
+		p.setValor1(0);
+		p.setValor2((double)5);
+		l.addInicioLista(p);
+		assertEquals(1, l.getTamLista());
+		
+		p.setValor1(1);
+		p.setValor2((double)4);
+		l.addInicioLista(p);
+		assertEquals(2, l.getTamLista());
+
+		p.setValor1(2);
+		p.setValor2((double)3);
+		l.addInicioLista(p);
+		assertEquals(3, l.getTamLista());
+		
+		l.removeFimLista();
+		assertEquals(2, l.getTamLista());
+		
+		l.removeFimLista();
+		assertEquals(1, l.getTamLista());
+
+		l.removeFimLista();
+		assertEquals(0, l.getTamLista());
+		
+		l.removeFimLista();
+		assertEquals(0, l.getTamLista());
+	}
+
+}

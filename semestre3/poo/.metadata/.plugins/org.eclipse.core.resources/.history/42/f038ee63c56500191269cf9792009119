@@ -1,0 +1,57 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class DicionarioTest {
+
+	@BeforeEach
+	void setUp() throws Exception {
+		Dicionario <Integer, String> d = new Dicionario <Integer, String> ();
+		d.add(1, "leo");
+		d.add(2, "herisque");
+		d.add(3, "narutin");
+	}
+
+	@Test
+	void testDicionario() {
+	
+	}
+
+	@Test
+	void testAdd() {
+	}
+
+	@Test
+	void testGet() {
+		Dicionario <Integer, String> d = new Dicionario <Integer, String> ();
+		d.add(1, "leo");
+		d.add(2, "herisque");
+		d.add(3, "narutin");
+		
+		System.out.println("chave = " + d.get(3));
+	}
+
+	@Test
+	void testContains() {
+		Dicionario <Integer, String> d = new Dicionario <Integer, String> ();
+		d.add(1, "leo");
+		d.add(2, "herisque");
+		d.add(3, "narutin");
+		
+		if(d.contains(3)) System.out.println("tà là meu garoto");
+		else System.out.println("não tà là meu garoto");
+	}
+
+	@Test
+	void testContainsValue() {
+		Dicionario <Integer, String> d = new Dicionario <Integer, String> ();
+		d.add(1, "leo");
+		d.add(2, "herisque");
+		d.add(3, "narutin");
+		
+		if(d.containsValue("narutin")) System.out.println("tà là meu garoto");
+		else System.out.println("não tà là meu garoto");
+	}
+
+}

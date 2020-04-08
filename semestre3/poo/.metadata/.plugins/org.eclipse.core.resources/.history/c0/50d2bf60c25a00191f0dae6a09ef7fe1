@@ -1,0 +1,11 @@
+public class Main {
+	Funcionario funcionarios[];
+	
+	String auxNome;
+	String auxCpf;
+	double auxSalario;
+	for(int i = 0; i < 10; ++i) {
+		
+	}
+	
+}

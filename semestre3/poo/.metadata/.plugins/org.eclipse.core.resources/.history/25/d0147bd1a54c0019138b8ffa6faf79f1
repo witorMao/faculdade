@@ -1,0 +1,53 @@
+
+public class Baralho {
+	private Carta cartas[] = new Carta[52];
+	private Num_aleatorios random = new Num_aleatorios();
+	private boolean flag[] = new boolean[52];
+	private Carta ultima;
+	
+	public Baralho() {
+		int aux;
+		for(int i = 0; i < 13; ++i) {
+			flag[i] = false;
+			aux = 2+i;
+			if(aux == 10) cartas[i] = new Carta('p', '!');//paus
+			else cartas[i] = new Carta('p', (char)aux);//paus
+		}
+		for(int i = 13; i < 26; ++i) {
+			flag[i] = false;
+			aux = 2+i;
+			if(aux == 10) cartas[i] = new Carta('o', '!');//ouros
+			else cartas[i] = new Carta('o', (char)aux);//ouros
+		}
+		for(int i = 26; i < 39; ++i) {
+			flag[i] = false;
+			aux = 2+i;
+			if(aux == 10) cartas[i] = new Carta('c', '!');//copas
+			else cartas[i] = new Carta('c', (char)aux);//copas
+		}
+		for(int i = 39; i < 52; ++i) {
+			flag[i] = false;
+			aux = 2+i;
+			if(aux == 10) cartas[i] = new Carta('e', '!');//espadas
+			else cartas[i] = new Carta('e', (char)aux);//espadas
+		}
+	}
+	
+	public Carta[] retornaCartas() {
+		Carta vetor[] = new Carta[5];
+		
+		int aux;
+		for(int i = 0; i < 5; ++i) {
+			aux = random.getIntRand(0, 53);	
+			//enquanto a nova carta selecionada for igual a última gerada, escolhe uma nova carta
+			while(i != 0 && this.cartas[aux].comparaCartas(this.ultima)) {
+				aux = random.getIntRand(0, 53);
+			}
+			//depois copia a nova carta para o vetor e atualiza a ultima carta
+			vetor[i] = new Carta(this.cartas[aux].getNaipe(), this.cartas[aux].getValor());
+			this.ultima.copiaCarta(this.cartas[aux]);
+		}
+		
+		return vetor;
+	}
+}

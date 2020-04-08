@@ -1,0 +1,6 @@
+public class Bozo {
+	public static void main(String[] args) {
+		RolaDados dados = new RolaDados(5);
+		Placar pontos = new Placar();
+	}
+}

@@ -1,0 +1,7 @@
+
+
+public class exercicio1 {
+	int chute_inical, x;
+	chute_inicial = EntradaTeclado.leInt();
+	x = EntradaTeclado.leInt();
+}

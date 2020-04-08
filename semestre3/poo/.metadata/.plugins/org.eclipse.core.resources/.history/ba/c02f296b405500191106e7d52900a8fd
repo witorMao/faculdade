@@ -1,0 +1,12 @@
+public class PoupançaOuro extends ContaPoupanca{
+	
+	public PoupançaOuro(String n, int d) {
+		super(n, d);
+	}
+	
+	public void atualiza(double taxa) {
+		double s = getSaldo();
+		setSaldo(s * (1.0 + taxa));
+	}
+
+}

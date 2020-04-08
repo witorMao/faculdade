@@ -1,0 +1,89 @@
+
+public class Baralho {
+	private Carta cartas[] = new Carta[52];
+	private Num_aleatorios random = new Num_aleatorios();
+	private Carta ultima = new Carta();
+	
+	public Baralho() {
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta('p', 2+i);//paus
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta('o', 2+i);//ouros
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta('c', 2+i);//copas
+		}
+		for(int i = 0; i < 13; ++i) {
+			cartas[i].Carta('e', 2+i);//espadas
+		}
+	}
+	
+	public Carta[] retornaCartas() {
+		Carta vetor[] = new Carta[5];
+		
+		int aux;
+		for(int i = 0; i < 5; ++i) {
+			aux = random.getIntRand(0, 53);
+		}
+//		
+//		int aux_naipe;
+//		int aux_valor;
+//		char naipe;
+//		char valor;
+//	
+//		for(int i = 0; i < 5; ++i) {
+//			aux_naipe = random.getIntRand(0, 4);
+//			if(aux_naipe == 0) naipe = 'p';
+//			else if(aux_naipe == 1) naipe = 'o';
+//			else if(aux_naipe == 2) naipe = 'c';
+//			else if(aux_naipe == 3) naipe = 'e';	
+//			
+//			aux_valor = random.getIntRand(2, 15);
+//			
+//			switch (aux_valor) {
+//				case 2:
+//					valor = '2';
+//					break;
+//				case 3:
+//					valor = '3';
+//					break;
+//				case 4:
+//					valor = '4';
+//					break;
+//				case 5:
+//					valor = '5';
+//					break;
+//				case 6:
+//					valor = '6';
+//					break;
+//				case 7:
+//					valor = '7';
+//					break;
+//				case 8:
+//					valor = '8';
+//					break;
+//				case 9:
+//					valor = '9';
+//					break;
+//				case 10:
+//					valor = '!';//representa o valor 10
+//					break;
+//				case 11:
+//					valor = 'j';
+//					break;
+//				case 12:
+//					valor = 'q';
+//					break;
+//				case 13:
+//					valor = 'k';
+//					break;
+//				case 14:
+//					valor = 'a';
+//					break;
+//			}
+			
+				
+		//}
+	}
+}

@@ -1,0 +1,7 @@
+public class Dado {
+	private int lados = 6;
+	
+	public int rolaDado (lados+1) {
+		
+	}
+}

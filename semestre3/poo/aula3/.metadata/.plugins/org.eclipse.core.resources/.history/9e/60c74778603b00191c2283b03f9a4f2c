@@ -1,0 +1,15 @@
+import java.io.IOException;
+
+public class exercicio1 {
+	public static void main(String[] args) throws IOException {
+		int chute = EntradaTeclado.leInt();
+		int x = EntradaTeclado.leInt();
+		double aux = (chute - (x/chute))/2;
+		double erro_calc = aux - chute;
+		while(erro_calc > 0.00000001){
+			aux = (chute - (x/chute))/2;
+			erro_calc = aux - chute;
+		}
+			
+	}
+}

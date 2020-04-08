@@ -1,0 +1,17 @@
+public class Dado {
+	private int lados;
+	private Num_aleatorios num = new Num_aleatorios(); 
+	
+	public Dado(int l) {
+		this.lados = l;
+	}
+	
+	public Dado() {
+		this.lados = 6;
+	}
+	
+	public int rolaDado () {
+		return this.num.getIntRand(1, this.lados+1);
+	}
+	
+}

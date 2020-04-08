@@ -1,0 +1,3 @@
+#
+#Fri Jun 21 13:56:44 BRT 2019
+task-tag-projects-already-scanned=Aula4,aula5,aula8,aula7,exercicioagenda,aula2,videoPoker,Elevador,exercicioaula3,programa3_aula1,bozo,exercico1L2,exerciciotele,programa2_aula1,ContaPalavra,projeto,generics,Aplicativo,programa1_aula1,empresa,exercicio3L2,exercicio4L2,exercicioGenerics,grafo

@@ -1,0 +1,91 @@
+public class RolaDados {
+	private int qntd;
+	private Dado dados[];
+	
+	public RolaDados(int n) {
+		this.qntd = n;
+		this.dados[] = new Dado[this.qntd];
+		for(int i = 0; i < this.qntd; ++i) this.dados[i] = new Dado();
+	}
+	
+	/**
+	 * rola tdos os dados
+	 * @return
+	 */
+	public int[] rolar() {
+		int rolagem[] = new int[this.qntd];
+		for(int i = 0; i < this.qntd; ++i) rolagem[i] = this.dados[i].rolar();
+		return rolagem;
+	}
+	
+	/**
+	 * rola os dados indicados pelo vetor boolean
+	 * @param quais
+	 * @return
+	 */
+	public int[] rolar(boolean [] quais) {
+		int rolagem[] = new int[this.qntd];
+		for(int i = 0; i < this.qntd; ++i) {
+			if(quais[i] == true) rolagem[i] = this.dados[i].rolar();
+		}
+		return rolagem;
+	}
+	
+	/**
+	 * rola os dados indicados na string
+	 * @param s
+	 * @return
+	 */
+	public int[] rolar(java.lang.String s) {
+		int rolagem[] = new int[this.qntd];
+		char s_char[] = new char[s.length()];
+		s_char = s.toCharArray();
+		
+		for(int i = 0; i < s.length(); ++i) {
+			if(s_char[i] != ' ' && (s_char[i] >= '0' && s_char[i] < (char)qntd)) 
+				rolagem[(int)s_char[i]] = this.dados[(int)s_char[i]].rolar();
+		}
+		return rolagem;
+	}
+	
+	/**
+	 * printa o q deu 
+	 */
+	@Override
+	public String toString() {
+		String aux = " 1          2          3          4          5\n" + "+-----+    +-----+    +-----+    +-----+    +-----+\n";
+	 	
+		for(int i = 0; i < 5; ++i) {
+            if (this.dados[i].getLado() == 1) aux += "|     |  ";
+            else if (this.dados[i].getLado() == 2 || this.dados[i].getLado() == 3) aux += "|*    |  ";
+            else aux += "|*   *|  ";
+            if (i == 4) aux += "\n";
+        }
+
+        for(int i = 0; i < 5; ++i) {
+            if (this.dados[i].getLado() == 1 || this.dados[i].getLado() == 3 || this.dados[i].getLado() == 5) aux += "|  *  |  ";
+            else if (this.dados[i].getLado() == 6) aux += "|*   *|  ";
+            else aux += "|     |  ";
+            if (i == 4) aux += "\n";
+        }
+
+        for(int i = 0; i < 5; ++i) {
+            if (this.dados[i].getLado() == 2 || this.dados[i].getLado() == 3) aux += "|    *|  ";
+            else if (this.dados[i].getLado() == 1) aux += "|     |  ";
+            else aux += "|*   *|  ";
+            if (i == 4) aux += "\n";
+        }
+        
+        aux += "+-----+  +-----+  +-----+  +-----+  +-----+\n";
+        return aux;
+	}
+	
+	public static void main(String[] args) {
+		RolaDados vetor = new RolaDados(5);
+//		for(int i = 0; i < 5; ++i) {
+//			vetor.dados[i].rolar();
+//		}
+		System.out.println("q deu: " + vetor.dados[0].rolar());
+		System.out.println(vetor.toString());
+	}
+}

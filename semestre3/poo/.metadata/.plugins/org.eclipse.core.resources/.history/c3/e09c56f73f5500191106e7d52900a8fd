@@ -1,0 +1,18 @@
+public class PoupançaOuro extends ContaPoupanca{
+	private int vencimento;
+	
+
+	public int getVencimento() {
+		return vencimento;
+	}
+
+	public void setVencimento(int vencimento) {
+		this.vencimento = vencimento;
+	}
+
+	public void atualiza(double taxa) {
+		double s = getSaldo();
+		setSaldo(s * (1.0 + taxa));
+	}
+
+}

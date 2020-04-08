@@ -1,0 +1,25 @@
+/**
+ * Representa um tipo de ContaPoupança, a Conta PoupançaOuro
+ * @author delamaro
+ *
+ */
+public class PoupançaOuro extends ContaPoupanca{
+	
+	public PoupançaOuro(String n, int d) {
+		super(n, d);
+	}
+	
+	public void atualiza(double taxa) {
+		double s = getSaldo();
+		setSaldo(s * (1.5 + taxa));
+	}
+	
+	public int compareTo(ContaBancaria c) {
+		if(c instanceof ContaEspecial) return -1;//a conta pssada é menor q a q chamou
+		else {
+			if(c instanceof PoupançaSimples) return 1;
+			else return super.compareTo();
+		}
+	}
+
+}
