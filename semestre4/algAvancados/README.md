@@ -1,3 +1,7 @@
+# Advanced algorithms and applications
+
+	This repository contains implementations of the projects made in the second semester of 2019 to this subject.
+
 # Algoritmos avançados e aplicações
 
-Neste repositório contêm as implementações do algoritmo de Huffman (projeto 1), um programa de força bruta que calcula o menor custo para o contrato de pacote para o desenvolvimento de uma aplicação (projeto1Extra) e por fim a implementação de um programa utilizando programação dinâmica para cálculo do número de maneiras de subir uma escada (projeto2).
+	Neste repositório contêm as implementações dos projetos feito no segundo semestre de 2019 para essa disciplina.
