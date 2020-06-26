@@ -1,7 +1,7 @@
 # About
 
-	In this repository can be find some of mine project made over my time the college. There are just as forma of backup.
-	They are separeted by semester and inside the semester folder are present the subjects folders in wich is the respectives projects.
+	In this repository can be find some of mine project made over my time in the college. There are just as form of backup.
+	They are separeted by semester and inside the semester folder are present the subjects folders in wich is the related projects.
 
 # Sobre 
 	
