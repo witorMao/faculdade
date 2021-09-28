@@ -1,0 +1,70 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -U -M 2
+Relation:     echocardiogram-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.MathExpression-Erint(A)
+Instances:    132
+Attributes:   13
+              survival
+              still-alive
+              age-at-heart-attack
+              pericardial-effusion
+              fractional-shortening
+              epss
+              lvdd
+              wall-motion-score
+              wall-motion-index
+              mult
+              name
+              group
+              alive-at-1
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 unpruned tree
+------------------
+
+survival <= 8: 1 (22.0)
+survival > 8
+|   still-alive <= 0: 0 (45.0)
+|   still-alive > 0
+|   |   lvdd <= 4: 1 (2.0)
+|   |   lvdd > 4: 0 (5.0)
+
+Number of Leaves  : 	4
+
+Size of the tree : 	7
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          71               95.9459 %
+Incorrectly Classified Instances         3                4.0541 %
+Kappa statistic                          0.9044
+Mean absolute error                      0.0282
+Root mean squared error                  0.1493
+Relative absolute error                 12.3745 %
+Root relative squared error             44.9938 %
+Total Number of Instances               74     
+Ignored Class Unknown Instances                 58     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,125    0,943      1,000    0,971      0,909    0,681     0,489     0
+                 ?        0,000    ?          ?        ?          ?        ?         ?         ?
+                 0,875    0,000    1,000      0,875    0,933      0,909    0,901     0,627     1
+                 ?        0,000    ?          ?        ?          ?        ?         ?         2
+Weighted Avg.    0,959    0,084    0,962      0,959    0,959      0,909    0,752     0,534     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 50  0  0  0 |  a = 0
+  0  0  0  0 |  b = ?
+  3  0 21  0 |  c = 1
+  0  0  0  0 |  d = 2
+

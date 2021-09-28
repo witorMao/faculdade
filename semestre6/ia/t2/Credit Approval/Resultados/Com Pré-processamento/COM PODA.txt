@@ -1,0 +1,106 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     CreditApproval-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.NumericCleaner-min-1.7976931348623157E308-min-default-1.7976931348623157E308-max1.7976931348623157E308-max-default1.7976931348623157E308-closeto0.0-closeto-default0.0-closeto-tolerance1.0E-6-Rfirst-last-decimals-1-weka.filters.unsupervised.attribute.NumericCleaner-min-1.7976931348623157E308-min-default-1.7976931348623157E308-max1.7976931348623157E308-max-default1.7976931348623157E308-closeto0.0-closeto-default0.0-closeto-tolerance1.0E-6-Rfirst-last-decimals-1-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    690
+Attributes:   16
+              A1
+              A2
+              A3
+              A4
+              A5
+              A6
+              A7
+              A8
+              A9
+              A10
+              A11
+              A12
+              A13
+              A14
+              A15
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+A9 = t
+|   A10 = t: + (228.0/21.0)
+|   A10 = f
+|   |   A15 <= 0.00444
+|   |   |   A7 = v
+|   |   |   |   A4 = u
+|   |   |   |   |   A14 <= 0.056
+|   |   |   |   |   |   A15 <= 0.00033: + (14.0)
+|   |   |   |   |   |   A15 > 0.00033: - (3.0/1.0)
+|   |   |   |   |   A14 > 0.056
+|   |   |   |   |   |   A15 <= 0.0007: - (30.0/10.0)
+|   |   |   |   |   |   A15 > 0.0007: + (2.0)
+|   |   |   |   A4 = y
+|   |   |   |   |   A13 = g: - (12.0/2.0)
+|   |   |   |   |   A13 = s: + (3.0/1.0)
+|   |   |   |   |   A13 = p: - (0.0)
+|   |   |   |   A4 = l: - (0.0)
+|   |   |   A7 = h: + (27.0/8.0)
+|   |   |   A7 = bb
+|   |   |   |   A2 <= 0.204211: + (3.0)
+|   |   |   |   A2 > 0.204211
+|   |   |   |   |   A3 <= 0.049107: + (3.0/1.0)
+|   |   |   |   |   A3 > 0.049107: - (8.0)
+|   |   |   A7 = ff: - (5.0/1.0)
+|   |   |   A7 = j: - (1.0)
+|   |   |   A7 = z: + (0.0)
+|   |   |   A7 = o: + (0.0)
+|   |   |   A7 = dd: + (1.0)
+|   |   |   A7 = n: + (0.0)
+|   |   A15 > 0.00444: + (21.0/1.0)
+A9 = f
+|   A3 <= 0.005893
+|   |   A7 = v
+|   |   |   A2 <= 0.328271: - (20.0/4.0)
+|   |   |   A2 > 0.328271: + (4.0)
+|   |   A7 = h: - (0.0)
+|   |   A7 = bb: + (1.0)
+|   |   A7 = ff: - (4.0)
+|   |   A7 = j: + (1.0)
+|   |   A7 = z: - (0.0)
+|   |   A7 = o: - (0.0)
+|   |   A7 = dd: - (0.0)
+|   |   A7 = n: + (1.0)
+|   A3 > 0.005893: - (298.0/12.0)
+
+Number of Leaves  : 	31
+
+Size of the tree : 	45
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         592               85.7971 %
+Incorrectly Classified Instances        98               14.2029 %
+Kappa statistic                          0.7123
+Mean absolute error                      0.1932
+Root mean squared error                  0.3392
+Relative absolute error                 39.1223 %
+Root relative squared error             68.2616 %
+Total Number of Instances              690     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,837    0,125    0,843      0,837    0,840      0,712    0,872     0,782     +
+                 0,875    0,163    0,870      0,875    0,872      0,712    0,872     0,860     -
+Weighted Avg.    0,858    0,146    0,858      0,858    0,858      0,712    0,872     0,825     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 257  50 |   a = +
+  48 335 |   b = -
+

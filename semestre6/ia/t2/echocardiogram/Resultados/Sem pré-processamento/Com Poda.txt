@@ -1,0 +1,66 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     echocardiogram
+Instances:    132
+Attributes:   13
+              survival
+              still-alive
+              age-at-heart-attack
+              pericardial-effusion
+              fractional-shortening
+              epss
+              lvdd
+              wall-motion-score
+              wall-motion-index
+              mult
+              name
+              group
+              alive-at-1
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+survival <= 10: 1 (24.33/1.0)
+survival > 10: 0 (49.67/0.67)
+
+Number of Leaves  : 	2
+
+Size of the tree : 	3
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          72               97.2973 %
+Incorrectly Classified Instances         2                2.7027 %
+Kappa statistic                          0.937 
+Mean absolute error                      0.0217
+Root mean squared error                  0.1002
+Relative absolute error                  9.5141 %
+Root relative squared error             30.2116 %
+Total Number of Instances               74     
+Ignored Class Unknown Instances                 58     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,083    0,962      1,000    0,980      0,939    0,701     0,505     0
+                 ?        0,000    ?          ?        ?          ?        ?         ?         ?
+                 0,917    0,000    1,000      0,917    0,957      0,939    0,926     0,609     1
+                 ?        0,000    ?          ?        ?          ?        ?         ?         2
+Weighted Avg.    0,973    0,056    0,974      0,973    0,973      0,939    0,774     0,539     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 50  0  0  0 |  a = 0
+  0  0  0  0 |  b = ?
+  2  0 22  0 |  c = 1
+  0  0  0  0 |  d = 2
+

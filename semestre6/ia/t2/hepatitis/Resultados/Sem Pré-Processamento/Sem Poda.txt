@@ -1,0 +1,96 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -U -M 2
+Relation:     hepatitis
+Instances:    155
+Attributes:   20
+              Class
+              AGE
+              SEX
+              STEROID
+              ANTIVIRALS
+              FATIGUE
+              MALAISE
+              ANOREXIA
+              LIVER BIG
+              LIVER FIRM
+              SPLEEN PALPABLE
+              SPIDERS
+              ASCITES
+              VARICES
+              BILIRUBIN
+              ALK PHOSPHATE
+              SGOT
+              ALBUMIN
+              PROTIME
+              HISTOLOGY
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 unpruned tree
+------------------
+
+ASCITES = 1
+|   ALBUMIN <= 2.8: 1 (9.19/0.06)
+|   ALBUMIN > 2.8
+|   |   LIVER FIRM = 1: 2 (2.51/0.22)
+|   |   LIVER FIRM = 2
+|   |   |   ALBUMIN <= 2.9: 2 (2.15)
+|   |   |   ALBUMIN > 2.9: 1 (6.81/2.03)
+ASCITES = 2
+|   SPIDERS = 1
+|   |   SEX = 1
+|   |   |   LIVER FIRM = 1
+|   |   |   |   FATIGUE = 1
+|   |   |   |   |   ANTIVIRALS = 1: 2 (2.0)
+|   |   |   |   |   ANTIVIRALS = 2
+|   |   |   |   |   |   SGOT <= 101: 2 (7.38/0.32)
+|   |   |   |   |   |   SGOT > 101
+|   |   |   |   |   |   |   LIVER BIG = 1: 1 (3.3/0.09)
+|   |   |   |   |   |   |   LIVER BIG = 2
+|   |   |   |   |   |   |   |   ALBUMIN <= 3.7: 1 (2.22/0.02)
+|   |   |   |   |   |   |   |   ALBUMIN > 3.7: 2 (3.28/0.14)
+|   |   |   |   FATIGUE = 2: 2 (4.21)
+|   |   |   LIVER FIRM = 2
+|   |   |   |   AGE <= 40: 2 (4.15/1.0)
+|   |   |   |   AGE > 40: 1 (5.45/0.07)
+|   |   SEX = 2: 2 (6.25)
+|   SPIDERS = 2
+|   |   MALAISE = 1
+|   |   |   PROTIME <= 43: 1 (4.3/1.33)
+|   |   |   PROTIME > 43: 2 (19.71/1.64)
+|   |   MALAISE = 2: 2 (72.09/1.0)
+
+Number of Leaves  : 	16
+
+Size of the tree : 	31
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         125               80.6452 %
+Incorrectly Classified Instances        30               19.3548 %
+Kappa statistic                          0.4093
+Mean absolute error                      0.2029
+Root mean squared error                  0.3993
+Relative absolute error                 61.4628 %
+Root relative squared error             98.6191 %
+Total Number of Instances              155     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,531    0,122    0,531      0,531    0,531      0,409    0,742     0,516     1
+                 0,878    0,469    0,878      0,878    0,878      0,409    0,742     0,870     2
+Weighted Avg.    0,806    0,397    0,806      0,806    0,806      0,409    0,742     0,796     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  17  15 |   a = 1
+  15 108 |   b = 2
+

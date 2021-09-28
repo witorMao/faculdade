@@ -1,0 +1,72 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     hepatitis-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.instance.RemoveDuplicates
+Instances:    155
+Attributes:   20
+              Class
+              AGE
+              SEX
+              STEROID
+              ANTIVIRALS
+              FATIGUE
+              MALAISE
+              ANOREXIA
+              LIVER BIG
+              LIVER FIRM
+              SPLEEN PALPABLE
+              SPIDERS
+              ASCITES
+              VARICES
+              BILIRUBIN
+              ALK PHOSPHATE
+              SGOT
+              ALBUMIN
+              PROTIME
+              HISTOLOGY
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ASCITES = 1: 1 (20.0/6.0)
+ASCITES = 2
+|   SPIDERS = 1
+|   |   LIVER FIRM = 1: 2 (26.0/5.0)
+|   |   LIVER FIRM = 2: 1 (11.0/4.0)
+|   SPIDERS = 2: 2 (98.0/6.0)
+
+Number of Leaves  : 	4
+
+Size of the tree : 	7
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         126               81.2903 %
+Incorrectly Classified Instances        29               18.7097 %
+Kappa statistic                          0.328 
+Mean absolute error                      0.2572
+Root mean squared error                  0.3852
+Relative absolute error                 77.8989 %
+Root relative squared error             95.121  %
+Total Number of Instances              155     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,344    0,065    0,579      0,344    0,431      0,344    0,701     0,383     1
+                 0,935    0,656    0,846      0,935    0,888      0,344    0,701     0,879     2
+Weighted Avg.    0,813    0,534    0,791      0,813    0,794      0,344    0,701     0,777     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  11  21 |   a = 1
+   8 115 |   b = 2
+
